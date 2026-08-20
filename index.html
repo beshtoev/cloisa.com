@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cloisa — agents that clear the paperwork, without the data leaving your control</title>
+<meta name="description" content="Cloisa builds document agents for small telecom operators, ISPs and equipment distributors. Supplier invoices reconciled to purchase orders and receipts at device level, with sensitive data staying inside your boundary.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="index, follow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FBF9F6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12110F" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://cloisa.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23153F3A'/%3E%3Cpath d='M22 11.2a7 7 0 1 0 0 9.6' fill='none' stroke='%23FBF9F6' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:title" content="Cloisa">
+<meta property="og:description" content="Agents that clear the paperwork, without the data leaving your control.">
+<meta property="og:url" content="https://cloisa.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cloisa">
+<meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cloisa">
+<meta name="twitter:description" content="Agents that clear the paperwork, without the data leaving your control.">
+<style>
+  :root{
+    --bg:#FBF9F6; --ink:#15130F; --muted:#5C574E; --rule:#E2DCD1;
+    --accent:#153F3A; --accent-soft:#EDF1EF; --card:#FFFFFF;
+    --measure:100%;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --bg:#12110F; --ink:#F2EFE9; --muted:#A39D91; --rule:#2C2925;
+           --accent:#7FBDB2; --accent-soft:#1A2A27; --card:#191714; }
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:400 17px/1.65 ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  .sans{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:1rem;top:1rem;z-index:9;background:var(--card);padding:.6rem 1rem;border-radius:6px}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+  .wrap{max-width:46rem;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)}
+  header{padding:2.25rem 0 0}
+  .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit;width:max-content}
+  .mark{width:28px;height:28px;border-radius:6px;background:var(--accent);display:grid;place-items:center;flex:0 0 auto}
+  .mark svg{display:block}
+  .brand b{font:600 1.12rem/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.02em}
+  main{padding:clamp(3rem,7vw,5rem) 0 0}
+  h1{
+    font-size:clamp(2.1rem,5.6vw,3.1rem); line-height:1.12; letter-spacing:-.022em;
+    font-weight:500; margin:0 0 1.25rem; max-width:22ch;
+  }
+  .lede{font-size:clamp(1.08rem,2.1vw,1.28rem);color:var(--muted);max-width:var(--measure);margin:0}
+  section{padding:clamp(2.5rem,5vw,3.5rem) 0 0;border-top:1px solid var(--rule);margin-top:clamp(2.5rem,5vw,3.5rem)}
+  h2{
+    font:600 .78rem/1.4 ui-sans-serif,system-ui,sans-serif;
+    letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+    margin:0 0 1.6rem;
+  }
+  h3{font-size:1.12rem;font-weight:600;margin:0 0 .45rem;letter-spacing:-.01em}
+  p{margin:0 0 1.1rem;max-width:var(--measure)}
+  p:last-child{margin-bottom:0}
+  .steps{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr));margin:0;padding:0;list-style:none;counter-reset:s}
+  .steps li{
+    background:var(--card);border:1px solid var(--rule);border-radius:12px;
+    padding:1.25rem 1.25rem 1.35rem;counter-increment:s;
+  }
+  .steps li::before{
+    content:counter(s,decimal-leading-zero);
+    display:block;font:600 .72rem/1 ui-sans-serif,system-ui,sans-serif;
+    letter-spacing:.12em;color:var(--accent);margin-bottom:.85rem;
+  }
+  .steps p{font-size:.96rem;color:var(--muted);margin:0}
+  ul.controls{list-style:none;margin:0;padding:0;display:grid;gap:.85rem;max-width:44rem}
+  ul.controls li{padding-left:1.65rem;position:relative;color:var(--muted);font-size:1rem}
+  ul.controls li::before{
+    content:"";position:absolute;left:0;top:.62em;width:.55rem;height:.55rem;
+    border-radius:2px;background:var(--accent);
+  }
+  ul.controls b{color:var(--ink);font-weight:600}
+  .note{
+    background:var(--accent-soft);border:1px solid var(--rule);border-radius:12px;
+    padding:1.35rem 1.5rem;max-width:var(--measure);
+  }
+  .note p{font-size:.97rem;color:var(--muted);margin:0}
+  a{color:var(--accent);text-underline-offset:.18em;text-decoration-thickness:from-font}
+  a:hover{text-decoration-thickness:2px}
+  .contact a{font-size:1.15rem;font-weight:500}
+  footer{
+    border-top:1px solid var(--rule);margin-top:clamp(2.5rem,5vw,3.5rem);
+    padding:1.75rem 0 3rem;color:var(--muted);
+    font:400 .88rem/1.6 ui-sans-serif,system-ui,sans-serif;
+  }
+  footer p{max-width:none;margin:0 0 .3rem}
+</style>
+</head>
+<body>
+<a class="skip sans" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/">
+      <span class="mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 32 32"><path d="M22 11.2a7 7 0 1 0 0 9.6" fill="none" stroke="#FBF9F6" stroke-width="3" stroke-linecap="round"/></svg>
+      </span>
+      <b>Cloisa</b>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <h1>Agents that clear the paperwork, without the data leaving your control.</h1>
+    <p class="lede">Small regulated businesses drown in documents. Cloisa reads them, reconciles them,
+      and fills in the systems of record, while the sensitive parts stay inside your boundary.</p>
+  </div>
+
+  <div class="wrap">
+    <section>
+      <h2>The problem</h2>
+      <p>A small operator carries the same paperwork as a large one and none of the back office.
+        Invoices, receipts, referrals, claims and correspondence arrive unstructured and get keyed in
+        by hand, late, by whoever has time.</p>
+      <p>General purpose AI would solve most of it. But the people with the worst paperwork burden
+        are usually the ones who are personally accountable for the data in it, and sending client or
+        patient records to an outside model is exactly what they cannot casually do.</p>
+      <p>So the work stays manual. Not because the technology is missing, but because the control
+        model is.</p>
+    </section>
+
+    <section>
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li>
+          <h3>De-identify</h3>
+          <p>Direct identifiers are detected and replaced with stable tokens before anything is sent
+            anywhere. The mapping stays inside your environment.</p>
+        </li>
+        <li>
+          <h3>Reason</h3>
+          <p>Agents extract the fields, reconcile the document against your records, and explain any
+            discrepancy in plain business language.</p>
+        </li>
+        <li>
+          <h3>Propose</h3>
+          <p>Values are restored locally and a completed draft goes to a review queue with a
+            confidence score per field. A person commits it. Never the agent.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Controls</h2>
+      <p>The control model is the product, not a policy page attached to it.</p>
+      <ul class="controls">
+        <li><b>Human in the loop by default.</b> The system proposes. A person commits.</li>
+        <li><b>Confidence thresholds with abstention.</b> Below the line it asks rather than guesses.</li>
+        <li><b>Fails closed.</b> If detection is uncertain, the document does not proceed.</li>
+        <li><b>Least privilege.</b> Scoped tool access and segregation of duties on anything financial.</li>
+        <li><b>Versioned, visible policy.</b> Thresholds and rules are yours to read and change.</li>
+        <li><b>Complete audit evidence.</b> Every extraction, score, policy applied and human override.</li>
+        <li><b>Kill switch.</b> Suspend an agent, a workflow, a counterparty or an action type.</li>
+      </ul>
+      <p style="margin-top:1.4rem">Because the token mapping is reversible, this is pseudonymization
+        rather than anonymization. It reduces exposure. It does not remove your obligations, and we
+        will not tell you otherwise.</p>
+    </section>
+
+    <!-- ==== BEACHHEAD BLOCK: swap this one section if the vertical changes ==== -->
+    <section>
+      <h2>Where we start</h2>
+      <p>Small telecom operators, independent ISPs, and equipment distributors. They carry
+        enterprise inventory complexity, serial and IMEI level device tracking, dealer stock,
+        multiple locations, supplier procurement, on small business budgets and with no back office.</p>
+      <p>The first workflow is procure to pay. Match the supplier invoice against the purchase order
+        and the goods receipt, down to the individual device. Explain every discrepancy in plain
+        language. Route the exception to the right person with the evidence attached.</p>
+      <div class="note">
+        <p><b style="color:var(--ink)">We are looking for two or three design partners.</b>
+          If you run a small operator, an ISP, or a distributor and someone on your team reconciles
+          supplier invoices by hand, we would like to watch them do it for an hour. No commitment,
+          no software to install.</p>
+      </div>
+      <p style="margin-top:1.4rem">Healthcare and regulated financial services come next. The engine
+        is the same. The paperwork is not.</p>
+    </section>
+    <!-- ==== END BEACHHEAD BLOCK ==== -->
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:hello@cloisa.com">hello@cloisa.com</a></p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Cloisa Technologies Inc. &middot; Toronto, Canada</p>
+    <p>This site sets no cookies, loads no third-party resources, and runs no scripts.</p>
+  </div>
+</footer>
+</body>
+</html>
