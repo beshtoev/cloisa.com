@@ -1,13 +1,13 @@
 # cloisa.com
 
-Static marketing site for Cloisa Technologies Inc. One page, no build step, no dependencies.
+Static marketing site for Cloisa AI Inc. One page, no build step, no dependencies.
 Hosted on **GitHub Pages**.
 
 ## Contents
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | The entire site. Inline CSS, no JavaScript, no external requests |
+| `index.html` | The entire site (v2). Inline CSS, no JavaScript, no external requests. Sticky nav, hero, boundary-architecture SVG diagram, control cards |
 | `404.html` | Not-found page |
 | `CNAME` | Custom domain binding for GitHub Pages |
 | `robots.txt`, `sitemap.xml` | Crawling |
