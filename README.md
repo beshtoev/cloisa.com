@@ -1,13 +1,17 @@
 # cloisa.com
 
-Static marketing site for Cloisa AI Inc. One page, no build step, no dependencies.
+Static marketing site for Cloisa AI Inc. Five pages, no build step, no dependencies,
+no JavaScript. v3 repositions the site to cross-border tax (Canada-US coordinated files).
 Hosted on **GitHub Pages**.
 
 ## Contents
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | The entire site (v2). Inline CSS, no JavaScript, no external requests. Sticky nav, hero, boundary-architecture SVG diagram, control cards |
+| `index.html` | Home: problem, solution, review-queue illustration, practice value, design-partner ask |
+| `product/`, `trust/`, `founders/`, `notes/` | One folder per page, each a single `index.html` |
+| `assets/site.css` | Shared stylesheet for all pages |
+| `assets/murat.png`, `assets/elena.png` | Founder photos (from the deck) |
 | `404.html` | Not-found page |
 | `CNAME` | Custom domain binding for GitHub Pages |
 | `robots.txt`, `sitemap.xml` | Crawling |
@@ -95,9 +99,8 @@ Two things to change first:
 1. **Email addresses must actually receive mail.** `hello@cloisa.com` in `index.html` and
    `security@cloisa.com` in `.well-known/security.txt`. A dead contact address on a page asking for
    design partners is worse than no page
-2. **The beachhead section** is fenced in `index.html` between
-   `<!-- ==== BEACHHEAD BLOCK ... -->` comments. It currently reads telecom operators, ISPs and
-   equipment distributors. Swapping verticals touches nothing else
+2. **Notes** (`notes/index.html`) is the page that changes most often: add a dated entry at
+   the top of the list for each milestone, and update `sitemap.xml` lastmod
 
 ## Local preview
 

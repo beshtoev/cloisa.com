@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trust — Cloisa</title>
+<meta name="description" content="How Cloisa protects client data: names, SINs and SSNs become tokens inside the firm, the model sees tokens only, a preparer approves every field, and every step is logged.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="index, follow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FAF8F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11100E" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://cloisa.com/trust/">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23153F3A'/%3E%3Cpath d='M22 11.2a7 7 0 1 0 0 9.6' fill='none' stroke='%23FBF9F6' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:title" content="Trust — Cloisa">
+<meta property="og:description" content="Client identifiers never leave the firm. The control model, stated plainly.">
+<meta property="og:url" content="https://cloisa.com/trust/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cloisa">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="top">
+  <div class="wrap bar">
+    <a class="brand" href="/">
+      <span class="mark" aria-hidden="true">
+        <svg width="19" height="19" viewBox="0 0 32 32"><path d="M22 11.2a7 7 0 1 0 0 9.6" fill="none" stroke="#FBF9F6" stroke-width="3" stroke-linecap="round"/></svg>
+      </span>
+      <b>Cloisa</b>
+    </a>
+    <nav class="primary" aria-label="Pages">
+      <a href="/product/">Product</a>
+      <a href="/trust/" aria-current="page">Trust</a>
+      <a href="/founders/">Founders</a>
+      <a href="/notes/">Notes</a>
+    </nav>
+    <a class="btn" href="mailto:hello@cloisa.com?subject=Design%20partner">Become a design partner</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <div class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Trust</p>
+      <h1>Client identifiers never leave the firm.</h1>
+      <p class="lede">You are accountable for every SIN, SSN and account number in a client file.
+        Cloisa is built around that fact, and the control model below is enforced in the system,
+        not promised in a policy page.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <section aria-labelledby="boundary-h">
+      <div class="sec-head">
+        <span class="sec-num" aria-hidden="true">01</span>
+        <h2 id="boundary-h">Where the data goes</h2>
+        <p class="sec-lede">Names, SINs, SSNs and account numbers become tokens inside the firm's
+          environment. The model sees tokens only. Real values are restored locally, in front of
+          your preparer.</p>
+      </div>
+
+      <figure class="diagram-card">
+        <div class="diagram-scroll">
+        <svg viewBox="0 0 960 330" role="img" aria-labelledby="diag-title diag-desc">
+          <title id="diag-title">The Cloisa data boundary</title>
+          <desc id="diag-desc">Client documents are de-identified inside the firm. Only tokens
+            leave to the reasoning model. Drafted fields return with confidence scores, are
+            re-identified locally, and a preparer approves each field before anything reaches a
+            return.</desc>
+          <rect x="14" y="26" width="600" height="286" rx="18" class="dg-boundary" stroke-width="1.6" stroke-dasharray="7 6"/>
+          <text x="40" y="60" class="dg-lbl dg-label-in">INSIDE THE FIRM</text>
+          <text x="806" y="60" class="dg-lbl dg-label-out" text-anchor="middle">OUTSIDE</text>
+
+          <g>
+            <rect x="44" y="96" width="150" height="66" rx="11" class="dg-node"/>
+            <text x="119" y="124" text-anchor="middle" class="dg-t">Documents</text>
+            <text x="119" y="144" text-anchor="middle" class="dg-s">slips, statements, returns</text>
+          </g>
+          <g>
+            <rect x="248" y="96" width="150" height="66" rx="11" class="dg-node-hot"/>
+            <text x="323" y="124" text-anchor="middle" class="dg-t">De-identify</text>
+            <text x="323" y="144" text-anchor="middle" class="dg-s">identifiers become tokens</text>
+          </g>
+          <g>
+            <rect x="722" y="96" width="168" height="66" rx="11" class="dg-node"/>
+            <text x="806" y="124" text-anchor="middle" class="dg-t">Reason</text>
+            <text x="806" y="144" text-anchor="middle" class="dg-s">frontier model, tokens only</text>
+          </g>
+          <g>
+            <rect x="248" y="216" width="150" height="66" rx="11" class="dg-node-hot"/>
+            <text x="323" y="244" text-anchor="middle" class="dg-t">Re-identify</text>
+            <text x="323" y="264" text-anchor="middle" class="dg-s">restored locally</text>
+          </g>
+          <g>
+            <rect x="44" y="216" width="150" height="66" rx="11" class="dg-node"/>
+            <text x="119" y="244" text-anchor="middle" class="dg-t">Review queue</text>
+            <text x="119" y="264" text-anchor="middle" class="dg-s">a preparer approves</text>
+          </g>
+
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0L10 5L0 10z" class="dg-arrhead"/>
+            </marker>
+          </defs>
+          <line x1="194" y1="129" x2="242" y2="129" class="dg-arrow" marker-end="url(#arr)"/>
+          <line x1="398" y1="129" x2="716" y2="129" class="dg-arrow" marker-end="url(#arr)"/>
+          <text x="557" y="118" text-anchor="middle" class="dg-mono">tokens only →</text>
+          <path d="M806 162 L806 249 L404 249" class="dg-arrow" marker-end="url(#arr)"/>
+          <text x="620" y="238" text-anchor="middle" class="dg-mono">← fields + confidence</text>
+          <line x1="242" y1="249" x2="200" y2="249" class="dg-arrow" marker-end="url(#arr)"/>
+        </svg>
+        </div>
+        <figcaption>No client identifier crosses the boundary. The token mapping never leaves the
+          firm's environment, and nothing reaches a return without a preparer's approval.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="controls-h">
+      <div class="sec-head">
+        <span class="sec-num" aria-hidden="true">02</span>
+        <h2 id="controls-h">The controls</h2>
+        <p class="sec-lede">Every control is enforced in the system, visible to the firm, and
+          evidenced in the audit record.</p>
+      </div>
+      <ul class="controls-grid">
+        <li>
+          <span class="ctl-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c.8-3.4 3.6-5.2 7-5.2s6.2 1.8 7 5.2"/></svg></span>
+          <h3>A person commits</h3>
+          <p>The agent proposes. Nothing reaches a return without a preparer's approval.</p>
+        </li>
+        <li>
+          <span class="ctl-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a8 8 0 0 1 16 0"/><path d="M12 14l3.5-3.5"/><path d="M3 18h18"/></svg></span>
+          <h3>Abstains when unsure</h3>
+          <p>Below the confidence threshold it asks rather than guesses.</p>
+        </li>
+        <li>
+          <span class="ctl-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+          <h3>Fails closed</h3>
+          <p>If identifier detection is uncertain, the document stops. It does not proceed.</p>
+        </li>
+        <li>
+          <span class="ctl-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="9" r="3.5"/><path d="M11 11.5L20 20.5"/><path d="M16.5 17l2-2M18.5 19l2-2"/></svg></span>
+          <h3>Least privilege</h3>
+          <p>Scoped access and segregation of duties on anything that touches client data.</p>
+        </li>
+        <li>
+          <span class="ctl-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h7M9 16h7"/></svg></span>
+          <h3>Versioned, visible policy</h3>
+          <p>Thresholds and rules the firm can read and change, with every version kept.</p>
+        </li>
+        <li>
+          <span class="ctl-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v4H4zM4 15h16v4H4z"/><path d="M7 7h.01M7 17h.01"/></svg></span>
+          <h3>Complete audit evidence</h3>
+          <p>Every extraction, score, rule applied and human override is recorded.</p>
+        </li>
+        <li>
+          <span class="ctl-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v8"/><path d="M6.3 6.3a8 8 0 1 0 11.4 0"/></svg></span>
+          <h3>Kill switch</h3>
+          <p>Suspend an agent, a workflow or an action type at once.</p>
+        </li>
+      </ul>
+      <div class="honesty">
+        <p><b>A claim we will not make.</b> Because the token mapping is reversible, this is
+          pseudonymization rather than anonymization. It reduces exposure. It does not remove the
+          firm's obligations, and we will not tell you otherwise.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="practice-h2">
+      <div class="sec-head">
+        <span class="sec-num" aria-hidden="true">03</span>
+        <h2 id="practice-h2">This site practices what it sells</h2>
+      </div>
+      <div class="problem-grid">
+        <p class="big-claim">The control model starts <em>with our own website.</em></p>
+        <div class="problem-copy">
+          <p>This site sets no cookies, loads nothing from third parties, runs no scripts and
+            keeps no analytics. Nothing about your visit reaches anyone, including us.</p>
+          <p>Questions about the data boundary, deployment, or how the controls are evidenced:
+            <a href="mailto:hello@cloisa.com">hello@cloisa.com</a>.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <p class="legal"><b>Cloisa AI Inc.</b> &middot; Toronto, Canada</p>
+      <p><a href="mailto:hello@cloisa.com">hello@cloisa.com</a></p>
+    </div>
+    <div>
+      <nav aria-label="Footer">
+        <a href="/product/">Product</a>
+        <a href="/trust/">Trust</a>
+        <a href="/founders/">Founders</a>
+        <a href="/co-founder/">Join us</a>
+        <a href="/notes/">Notes</a>
+      </nav>
+      <p style="margin-top:.8rem">This site sets no cookies, loads no third-party resources, and runs no scripts.<br>
+        Security contact: <a href="/.well-known/security.txt">security.txt</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

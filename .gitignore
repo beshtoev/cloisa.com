@@ -1,0 +1,5 @@
+# Private working assets — never publish to this public repo
+*.pptx
+linkedin-*
+cloisa-ai-logo-*
+.DS_Store
