@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#FAF8F3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#11100E" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://cloisa.com/">
-<link rel="stylesheet" href="/assets/site.css?v=2b7c2722">
+<link rel="stylesheet" href="/assets/site.css?v=6e7f3fd1">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
 <link rel="icon" type="image/png" sizes="300x300" href="/assets/logo.png">
 <link rel="apple-touch-icon" href="/assets/logo.png">
@@ -231,7 +231,7 @@
           pages.</p>
       </div>
 
-      <div class="queue-card" role="img" aria-label="Illustration of the Cloisa review queue for a sample coordinated Canada–US file">
+      <div class="queue-card">
         <div class="queue-head">
           <span><b>Coordinated file · 2026 tax year</b> &nbsp;·&nbsp; Sample client · T1 + 1040 · 4 fields to review</span>
           <span class="queue-badge">Tax professional approval required</span>
@@ -244,27 +244,41 @@
           <tbody>
             <tr>
               <td>T4 employment income</td>
-              <td>Line 10100</td>
-              <td>Line 1a</td>
-              <td><span class="pill ok">Ready · 99%</span></td>
+              <td><span class="ev" tabindex="0">Line 10100<span class="pop">From the client's T4 slip, box 14.<span class="snip">T4 · Box 14 Employment income<br>148,250.00</span></span></span></td>
+              <td><span class="ev" tabindex="0">Line 1a<span class="pop">Placed on the draft 1040, line 1a, converted to US dollars at the annual average rate.<span class="snip">1040 · Line 1a Wages<br>109,870 USD</span></span></span></td>
+              <td>
+                <input type="checkbox" class="ap" id="ap1" aria-label="Demo: approve T4 employment income">
+                <span class="pill ok ev" tabindex="0">Ready · 99%<span class="pop"><b>Why not 100%?</b> 99% is Cloisa's confidence in this field. The last 1% is yours on purpose: click Approve and it is locked in.</span></span>
+                <span class="pill approved">Approved by you</span>
+                <label class="fakebtn approve" for="ap1">Approve</label>
+              </td>
             </tr>
             <tr>
               <td>T5 interest</td>
-              <td>Line 12100</td>
-              <td>Schedule B</td>
-              <td><span class="pill ok">Ready · 98%</span></td>
+              <td><span class="ev" tabindex="0">Line 12100<span class="pop">From the client's T5 slip, box 13.<span class="snip">T5 · Box 13 Interest<br>1,872.40</span></span></span></td>
+              <td><span class="ev" tabindex="0">Schedule B<span class="pop">Listed on the draft Schedule B, Part I, in US dollars.<span class="snip">Schedule B · Part I<br>1,388 USD</span></span></span></td>
+              <td>
+                <input type="checkbox" class="ap" id="ap2" aria-label="Demo: approve T5 interest">
+                <span class="pill ok ev" tabindex="0">Ready · 98%<span class="pop"><b>Worth a look:</b> the issuer's name differs by one character from last year's T5. Cloisa flags it for your eye instead of assuming.</span></span>
+                <span class="pill approved">Approved by you</span>
+                <label class="fakebtn approve" for="ap2">Approve</label>
+              </td>
             </tr>
             <tr>
               <td>TFSA account</td>
-              <td>Tax-free</td>
-              <td>FBAR, Form 8938</td>
-              <td><span class="pill flag">Flagged: review funds for PFIC</span></td>
+              <td><span class="ev" tabindex="0">Tax-free<span class="pop">Tax-free in Canada. Nothing to report on the T1.</span></span></td>
+              <td><span class="ev" tabindex="0">FBAR, Form 8938<span class="pop">US rules do not recognize the TFSA wrapper: the account is reported on the FBAR and Form 8938.</span></span></td>
+              <td>
+                <span class="pill flag ev" tabindex="0">Flagged: review funds for PFIC<span class="pop"><b>Two funds inside this TFSA look like PFICs.</b> Your options: confirm the classification, ask the client for fund statements, or prepare Form 8621 for each. Your call, one click each.</span></span>
+              </td>
             </tr>
             <tr>
               <td>Foreign tax credit</td>
-              <td>Form T2209</td>
-              <td>Form 1116</td>
-              <td><span class="pill draft">Draft · needs review</span></td>
+              <td><span class="ev" tabindex="0">Form T2209<span class="pop">Draft T2209, the federal foreign tax credit.</span></span></td>
+              <td><span class="ev" tabindex="0">Form 1116<span class="pop">Draft Form 1116, passive basket, with the rule quoted beside the figure.<span class="snip">Canada&ndash;US treaty · Art. XXIV<br>Re-sourcing applied</span></span></span></td>
+              <td>
+                <span class="pill draft ev" tabindex="0">Draft · needs review<span class="pop">Waiting on the TFSA decision above: the credits shift if PFIC income changes.</span></span>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -273,7 +287,9 @@
           <span>Hover or tap any value to see where it came from &nbsp;·&nbsp; every step logged &nbsp;·&nbsp; a tax professional approves each field</span>
         </div>
       </div>
-      <p class="mock-note">An illustration of the review queue, with a simplified sample file.</p>
+      <p class="mock-note">A working illustration with a simplified sample file: hover or tap the
+        values, approve a field. Like everything on this site, it runs without a single
+        script.</p>
     </section>
 
     <section id="practice" aria-labelledby="practice-h">
