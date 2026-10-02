@@ -43,11 +43,11 @@ a:hover{text-decoration-thickness:2px}
   background:var(--bg);
   border-bottom:1px solid var(--rule-soft);
 }
-.bar{display:flex; align-items:center; gap:1rem 1.5rem; padding-block:.85rem; flex-wrap:wrap}
+.bar{display:flex; align-items:center; gap:1rem 1.5rem; padding-block:.6rem; flex-wrap:wrap}
 .brand{display:flex; align-items:center; gap:.6rem; text-decoration:none; color:inherit}
-.brand .logo{width:34px; height:34px; display:block; flex:0 0 auto}
+.brand .logo{width:64px; height:64px; display:block; flex:0 0 auto}
 @media (prefers-color-scheme:dark){ .brand .logo{filter:brightness(1.9) saturate(.85)} }
-.brand b{font:650 1.1rem/1 var(--sans); letter-spacing:.015em}
+.brand b{font:650 1.35rem/1 var(--sans); letter-spacing:.015em}
 nav.primary{margin-left:auto; display:flex; gap:1.3rem; font:500 .86rem/1 var(--sans); flex-wrap:wrap}
 nav.primary a{color:var(--muted); text-decoration:none; padding:.35rem 0}
 nav.primary a:hover{color:var(--ink)}
