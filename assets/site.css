@@ -159,7 +159,8 @@ ul.plain li::before{
   background:var(--accent-soft); border:1px solid var(--accent-line);
   padding:.4rem .6rem; border-radius:999px; white-space:nowrap;
 }
-.queue-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+.queue-scroll{overflow:visible}
+@media (max-width:760px){ .queue-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch} }
 table.queue{border-collapse:collapse; width:100%; min-width:38rem; font:400 .9rem/1.5 var(--sans)}
 table.queue th{
   text-align:left; font:600 .72rem/1.4 var(--sans); letter-spacing:.09em; text-transform:uppercase;
@@ -205,6 +206,39 @@ table.facts td{padding:.8rem 1.35rem; border-bottom:1px solid var(--rule-soft); 
 table.facts tr:last-child td{border-bottom:none}
 table.facts td:first-child{font-weight:600; color:var(--ink)}
 .sources{font:400 .8rem/1.6 var(--sans); color:var(--faint); max-width:56rem; margin:.4rem 0 0}
+
+/* interactive queue demo — CSS only, no scripts */
+.ev{position:relative; border-bottom:1px dashed var(--accent-line); cursor:help}
+td .ev{display:inline-block}
+.pop{
+  display:none; position:absolute; z-index:30; bottom:calc(100% + 10px); left:50%;
+  transform:translateX(-50%); width:17.5rem; white-space:normal; text-align:left;
+  background:var(--card); border:1px solid var(--card-edge); border-radius:10px;
+  box-shadow:0 10px 30px rgb(23 20 16 / .18); padding:.8rem .95rem;
+  font:400 .8rem/1.5 var(--sans); color:var(--muted); letter-spacing:0; text-transform:none;
+}
+.pop b{color:var(--ink)}
+.snip{
+  display:block; margin-top:.5rem; padding:.5rem .6rem; border-radius:7px;
+  background:var(--bg-2); border:1px dashed var(--rule);
+  font:500 .76rem/1.5 var(--mono); color:var(--ink);
+}
+.ev:hover .pop, .ev:focus .pop, .ev:focus-within .pop, .ev:active .pop{display:block}
+.pill.ev{cursor:help}
+.ap{position:absolute; width:1px; height:1px; opacity:0}
+.pill.approved{display:none; color:var(--ok); background:var(--ok-soft)}
+label.approve{cursor:pointer; margin-left:.45rem}
+.ap:checked ~ .pill{display:none}
+.ap:checked ~ .pill.approved{display:inline-block}
+.ap:checked ~ label.approve{display:none}
+.ap:focus-visible ~ label.approve{outline:2px solid var(--accent); outline-offset:2px; border-radius:8px}
+@media (max-width:720px){
+  .pop{
+    position:static; width:auto; transform:none; box-shadow:none;
+    margin-top:.5rem; border-left:3px solid var(--accent); border-radius:0 8px 8px 0;
+  }
+  td .ev{display:block}
+}
 
 /* steps */
 .steps{display:grid; gap:1rem; grid-template-columns:repeat(4,minmax(0,1fr)); margin:0; padding:0; list-style:none; counter-reset:s}
