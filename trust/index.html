@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trust — Cloisa AI</title>
-<meta name="description" content="How Cloisa protects client data: names, SINs and SSNs become tokens inside the firm, the model sees tokens only, a preparer approves every field, and every step is logged.">
+<meta name="description" content="How Cloisa protects client data: names, SINs and SSNs become tokens inside the firm, the model sees tokens only, a tax professional approves every field, and every step is logged.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="index, follow">
@@ -65,7 +65,7 @@
         <h2 id="boundary-h">Where the data goes</h2>
         <p class="sec-lede">Names, SINs, SSNs and account numbers become tokens inside the firm's
           environment. The model sees tokens only. Real values are restored locally, in front of
-          your preparer.</p>
+          your tax professional.</p>
       </div>
 
       <figure class="diagram-card">
@@ -74,8 +74,8 @@
           <title id="diag-title">The Cloisa data boundary</title>
           <desc id="diag-desc">Client documents are de-identified inside the firm. Only tokens
             leave to the reasoning model. Drafted fields return with confidence scores, are
-            re-identified locally, and a preparer approves each field before anything reaches a
-            return.</desc>
+            re-identified locally, and a tax professional approves each field before anything
+            reaches a return.</desc>
           <rect x="14" y="26" width="600" height="286" rx="18" class="dg-boundary" stroke-width="1.6" stroke-dasharray="7 6"/>
           <text x="40" y="60" class="dg-lbl dg-label-in">INSIDE THE FIRM</text>
           <text x="806" y="60" class="dg-lbl dg-label-out" text-anchor="middle">OUTSIDE</text>
@@ -103,7 +103,7 @@
           <g>
             <rect x="44" y="216" width="150" height="66" rx="11" class="dg-node"/>
             <text x="119" y="244" text-anchor="middle" class="dg-t">Review queue</text>
-            <text x="119" y="264" text-anchor="middle" class="dg-s">a preparer approves</text>
+            <text x="119" y="264" text-anchor="middle" class="dg-s">a tax professional approves</text>
           </g>
 
           <defs>
@@ -120,7 +120,7 @@
         </svg>
         </div>
         <figcaption>No client identifier crosses the boundary. The token mapping never leaves the
-          firm's environment, and nothing reaches a return without a preparer's approval.</figcaption>
+          firm's environment, and nothing reaches a return without a tax professional's approval.</figcaption>
       </figure>
     </section>
 
@@ -135,7 +135,7 @@
         <li>
           <span class="ctl-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c.8-3.4 3.6-5.2 7-5.2s6.2 1.8 7 5.2"/></svg></span>
           <h3>A person commits</h3>
-          <p>The agent proposes. Nothing reaches a return without a preparer's approval.</p>
+          <p>The agent proposes. Nothing reaches a return without a tax professional's approval.</p>
         </li>
         <li>
           <span class="ctl-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a8 8 0 0 1 16 0"/><path d="M12 14l3.5-3.5"/><path d="M3 18h18"/></svg></span>
