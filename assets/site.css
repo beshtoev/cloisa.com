@@ -95,6 +95,11 @@ h1{
 .quiet-claims li{display:flex; align-items:center; gap:.5rem}
 .quiet-claims svg{flex:0 0 auto; color:var(--accent)}
 
+.benefit-row{margin:2.4rem 0 0; padding:0; list-style:none; display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(14rem,1fr)); max-width:58rem}
+.benefit-row li{background:var(--card); border:1px solid var(--card-edge); border-radius:12px; padding:1.15rem 1.25rem}
+.benefit-row b{display:block; font:600 .98rem/1.35 var(--sans); margin-bottom:.35rem}
+.benefit-row p{font:400 .88rem/1.55 var(--sans); color:var(--muted); margin:0}
+
 /* ---------- subpage hero ---------- */
 .page-hero{
   padding:clamp(2.5rem,6vw,4rem) 0 clamp(2rem,4vw,2.75rem);
