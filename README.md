@@ -10,7 +10,7 @@ Hosted on **GitHub Pages**.
 | --- | --- |
 | `index.html` | Home: problem, solution, review-queue illustration, practice value, design-partner ask |
 | `product/`, `trust/`, `founders/`, `notes/` | One folder per page, each a single `index.html` |
-| `assets/site.css` | Shared stylesheet for all pages |
+| `assets/site.css` | Shared stylesheet for all pages. **Referenced with `?v=<hash>`**: when you edit it, update the `?v=` value in every page's `<link>` (any new short string works) so Porkbun's edge cache cannot serve stale CSS with fresh HTML |
 | `assets/murat.png`, `assets/elena.png` | Founder photos (from the deck) |
 | `404.html` | Not-found page |
 | `CNAME` | Custom domain binding for GitHub Pages |
