@@ -311,6 +311,21 @@ figure{margin:0}
 .note-list h3{font-size:1.1rem}
 .note-list p{color:var(--muted); font-size:1rem}
 
+/* faq */
+.faq{display:grid; gap:.8rem; max-width:52rem}
+.faq details{background:var(--card); border:1px solid var(--card-edge); border-radius:12px; padding:0}
+.faq summary{
+  cursor:pointer; list-style:none; padding:1.1rem 1.3rem;
+  font:600 1rem/1.45 var(--sans); color:var(--ink);
+  display:flex; justify-content:space-between; gap:1rem; align-items:baseline;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+"; font:500 1.2rem/1 var(--sans); color:var(--accent); flex:0 0 auto}
+.faq details[open] summary::after{content:"\2212"}
+.faq details > div{padding:0 1.3rem 1.2rem}
+.faq p{font:400 .95rem/1.65 var(--sans); color:var(--muted); margin:0 0 .8rem}
+.faq p:last-child{margin-bottom:0}
+
 /* contact block */
 .contact-panel{text-align:center; padding:clamp(1rem,2vw,2rem) 0}
 .contact-panel h2{margin-bottom:1rem}

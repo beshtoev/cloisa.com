@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#FAF8F3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#11100E" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://cloisa.com/trust/">
-<link rel="stylesheet" href="/assets/site.css?v=29f7c7a5">
+<link rel="stylesheet" href="/assets/site.css?v=2b7c2722">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
 <link rel="icon" type="image/png" sizes="300x300" href="/assets/logo.png">
 <link rel="apple-touch-icon" href="/assets/logo.png">
@@ -175,9 +175,147 @@
       </div>
     </section>
 
-    <section aria-labelledby="practice-h2">
+    <section aria-labelledby="sov-h">
       <div class="sec-head">
         <span class="sec-num" aria-hidden="true">03</span>
+        <h2 id="sov-h">Sovereignty and security</h2>
+        <p class="sec-lede">Where things run matters as much as how they run. These are the
+          commitments the product is being built to, stated carefully: a commitment is not yet a
+          certificate, and we will not blur the two.</p>
+      </div>
+      <ul class="not-grid">
+        <li>
+          <h3>A Canadian company, Canadian infrastructure</h3>
+          <p>Cloisa AI Inc. is a Canadian company based in Toronto. The product is being built to
+            run its infrastructure in data centers operated in Canada, with the identifier vault,
+            client documents and audit log living inside the firm's own environment or a
+            dedicated Canadian tenant.</p>
+        </li>
+        <li>
+          <h3>What crosses the border, if anything, is tokens</h3>
+          <p>By the time any text reaches a reasoning model, names, SINs, SSNs and account
+            numbers are already tokens, and the mapping back to real values never leaves the
+            firm. That design holds wherever the model runs.</p>
+        </li>
+        <li>
+          <h3>Client files never train models</h3>
+          <p>Our policy from day one: client documents and drafted returns are not used to train
+            AI models, ours or anyone else's. The product is improved against anonymized cases
+            graded by practitioners.</p>
+        </li>
+        <li>
+          <h3>Defense in depth</h3>
+          <p>Encryption in transit and at rest, scoped access, segregation of duties, and the
+            full audit record described above. Security is layered so that no single failure
+            exposes a client file.</p>
+        </li>
+        <li>
+          <h3>SOC 2: a commitment, not yet a certificate</h3>
+          <p>We are building to SOC 2 control standards from the first line of code, with
+            certification planned ahead of live client files at scale. Until the audit is done
+            we will say exactly that, and the certificate will be announced in
+            <a href="/notes/">Notes</a> when it exists.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="stakes-h">
+      <div class="sec-head">
+        <span class="sec-num" aria-hidden="true">04</span>
+        <h2 id="stakes-h">Why the stakes are high</h2>
+        <p class="sec-lede">Cross-border filing mistakes are not rounding errors. The penalties
+          for a single missed information form are set by statute.</p>
+      </div>
+      <ul class="stat-row">
+        <li>
+          <b>US$10,000</b>
+          <p>Penalty per missed US information form, such as Form 5471 or 8938, with continuation
+            penalties up to US$50,000, and the statute of limitations stays open until the form
+            is filed.<sup>1</sup></p>
+        </li>
+        <li>
+          <b>US$16,536</b>
+          <p>Maximum penalty per non-willful FBAR violation in 2026, inflation-adjusted from the
+            US$10,000 statutory base. Willful violations run far higher.<sup>2</sup></p>
+        </li>
+        <li>
+          <b>C$25 a day</b>
+          <p>CRA late-filing penalty for Form T1135 foreign income verification, to a maximum of
+            C$2,500 per year, before gross-negligence penalties.<sup>3</sup></p>
+        </li>
+      </ul>
+      <p class="sources">1. IRC ss. 6038(b), 6038D(d), 6501(c)(8). 2. 31 U.S.C. s. 5321(a)(5),
+        as inflation-adjusted for 2026. 3. ITA s. 162(7). Penalties depend on the facts; this is
+        context, not advice. A system built for this work has to assume every field can carry
+        this kind of consequence, which is why a tax professional approves every one.</p>
+    </section>
+
+    <section aria-labelledby="faq-h">
+      <div class="sec-head">
+        <span class="sec-num" aria-hidden="true">05</span>
+        <h2 id="faq-h">The questions we expect</h2>
+        <p class="sec-lede">Asked by the practices and filers we talk to. Honest answers, current
+          as of today; as commitments become facts, the answers get stronger in
+          <a href="/notes/">Notes</a>.</p>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Where does my client data live?</summary>
+          <div>
+            <p>In the deployment we are building: inside the firm's own environment or a
+              dedicated tenant in Canadian-operated data centers. The identifier vault and the
+              audit log never leave that boundary. What reaches a reasoning model is
+              de-identified tokens.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Is my data used to train AI models?</summary>
+          <div>
+            <p>No. Client documents and drafted returns are not used to train models, ours or
+              anyone else's. That is policy from day one, and it will be written into every
+              agreement.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Are you SOC 2 certified?</summary>
+          <div>
+            <p>Not yet, and we will not imply otherwise. We build to SOC 2 control standards and
+              plan certification ahead of live client files at scale. When the certificate
+              exists, it will be announced in <a href="/notes/">Notes</a>.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What happens when the AI is unsure or wrong?</summary>
+          <div>
+            <p>Below its confidence threshold, the system asks instead of guessing. If identifier
+              detection is uncertain, the document stops entirely. And nothing reaches a return
+              without a licensed tax professional approving it field by field, with every figure
+              linked to the exact page it came from, so an error is caught at review, not after
+              filing.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Who sees my client's identity?</summary>
+          <div>
+            <p>The firm, and only the firm. Identifiers become tokens inside the firm's boundary,
+              the reasoning model sees tokens only, and real values are restored locally in front
+              of the tax professional who signs.</p>
+          </div>
+        </details>
+        <details>
+          <summary>I am a filer, not a firm. What should I do?</summary>
+          <div>
+            <p>Your return should still be prepared and signed by your own licensed professional;
+              Cloisa is a tool for them, not a replacement. If someone prepares a coordinated
+              Canada&ndash;US return for you, send them this site.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section aria-labelledby="practice-h2">
+      <div class="sec-head">
+        <span class="sec-num" aria-hidden="true">06</span>
         <h2 id="practice-h2">This site practices what it sells</h2>
       </div>
       <div class="problem-grid">
